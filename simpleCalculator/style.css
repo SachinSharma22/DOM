@@ -1,0 +1,100 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: rgb(0,34,36);
+    background: linear-gradient(90deg, rgba(0,34,36,1) 0%, rgba(6,63,92,1) 34%, rgba(9,121,60,1) 61%, rgba(0,212,255,1) 100%);
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+}
+.container{
+    height: 400px;
+    width: 300px;
+    background-color: #fff;
+    margin: 100px auto;
+    box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+
+    display: flex;
+    flex-direction: column;
+    /* align-items: center;
+    justify-content: center; */
+}
+
+.container input{
+    width: 100%;
+    height: 3em;
+    text-align: center;
+    font-weight: bold;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-radius: 10px 10px 10px 10px;
+    -webkit-border-radius: 10px 10px 10px 10px;
+    -moz-border-radius: 10px 10px 10px 10px;
+}
+
+.buttons{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top: 20px;
+    color: black;
+
+}
+.buttons button{
+    width: 100%;
+    padding: 10px;
+    border-radius: 10px 10px 10px 10px;
+    -webkit-border-radius: 10px 10px 10px 10px;
+    -moz-border-radius: 10px 10px 10px 10px;
+    padding: 5px;
+}
+#add, #subtract, #multiply, #divide{
+    font-size: 20px;
+    font-weight: 500;
+    padding-bottom: 5px;
+}
+
+#add:hover{
+    background: red;
+    color: #fff;
+    box-shadow: 14px 29px 27px 12px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 14px 29px 27px 12px rgba(0,0,0,0.75);
+    -moz-box-shadow: 14px 29px 27px 12px rgba(0,0,0,0.75);
+}
+#subtract:hover{
+    background: rgb(148, 123, 123);
+    color: #fff;
+    box-shadow: 14px 29px 27px 12px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 14px 29px 27px 12px rgba(0,0,0,0.75);
+    -moz-box-shadow: 14px 29px 27px 12px rgba(0,0,0,0.75);
+}
+#multiply:hover{
+    background: rgb(204, 184, 184);
+    color: #fff;
+    box-shadow: 14px 29px 27px 12px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 14px 29px 27px 12px rgba(0,0,0,0.75);
+    -moz-box-shadow: 14px 29px 27px 12px rgba(0,0,0,0.75);
+}
+#divide:hover{
+    background: rgb(184, 169, 169);
+    color: #fff;
+    box-shadow: 14px 29px 27px 12px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 14px 29px 27px 12px rgba(0,0,0,0.75);
+    -moz-box-shadow: 14px 29px 27px 12px rgba(0,0,0,0.75);
+}
+
+#result{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    font-weight: 600;
+    padding-top: 10px;
+}
