@@ -1,3 +1,5 @@
+/*
+
 let mydiv = document.querySelector('#mydiv');
 let newElement = document.createElement('span');
 newElement.textContent = "This is me sachin sharma";
@@ -19,3 +21,10 @@ let mydiv3 = document.querySelector('#mydiv');
 let newElement3 = document.createElement('span');
 newElement3.textContent = "This is me sachin sharma part4";
 mydiv3.insertAdjacentElement('afterend', newElement3);
+*/
+
+let parent = document.querySelector('#mydiv');
+let child = document.querySelector("#fpara");
+
+parent.removeChild(child);
+
