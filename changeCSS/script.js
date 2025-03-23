@@ -27,4 +27,6 @@ let para1 = document.querySelector('#fpara');
 para1.setAttribute('class','pawan');
 para1.setAttribute('class','sachin class');
 
+// Use classList to add remove toggle and contains for a class
+
 
