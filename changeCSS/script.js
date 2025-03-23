@@ -18,7 +18,13 @@ firstPara.style.cssText = "background-color:grey;color:white; font-size: 30px; f
 let firstElement = document.querySelector('#fdiv');
 firstElement.setAttribute('class', 'firstDiv');
 // if I again set another class firstone is override
-firstElement.setAttribute('class', "secondFirstDiv");
+firstElement.setAttribute('class', 'secondFirstDiv');
 
 // we can also change the style property with the help of setAttribute
-firstElement.setAttribute('style',"padding:0.1rem")
+firstElement.setAttribute('style','padding:0.1rem')
+
+let para1 = document.querySelector('#fpara');
+para1.setAttribute('class','pawan');
+para1.setAttribute('class','sachin class');
+
+
