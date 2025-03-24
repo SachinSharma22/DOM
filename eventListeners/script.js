@@ -1,7 +1,8 @@
 // let fpara = document.getElementById('fpara');
 // fpara.textContent = "sachin";
 
-function changeText() {
+function changeText(event) {
+    console.log(event)
     let fpara = document.getElementById('fpara');
     fpara.textContent = "Your eventlistner perfome well";
 }
