@@ -44,7 +44,9 @@ let mydiv = document.getElementById('wrapper');
 
 // Make sure you only clicked on the element because when you clicked on other part of the document JavaScript alerts you that you have clicked on document
 function alertMsg (event) {
+   if(event.target.nodeName === "SPAN"){
     alert("You have clicked on : "+ event.target.textContent);
+   }
 }
 
 document.addEventListener('click', alertMsg);
