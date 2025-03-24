@@ -14,11 +14,11 @@
 // fpara.removeEventListener('click', changeText); 
 
 // Here we try to change the default behaviour of anchor tag
-let anchorTag  = document.getElementById('fanchor');
+// let anchorTag  = document.getElementById('fanchor');
 
 
-anchorTag.addEventListener('click', function(event) {
-    event.preventDefault();
-    anchorTag.textContent = "Click done";
-});
+// anchorTag.addEventListener('click', function(event) {
+//     event.preventDefault();
+//     anchorTag.textContent = "Click done";
+// });
 
