@@ -1,3 +1,23 @@
+
+
+
+
+/*
+let firtsPromise = new Promise((resolve, reject) => {
+    console.log("Sachin");
+    resolve(22222);
+    // reject(new Error("Internal Server Error"));
+})
+
+console.log(firtsPromise);
+
+function sayMyname() {
+    console.log("My name is Sachin Sharma");
+
+}
+
+setTimeout(sayMyname, 2000);
+*/
 /*
 function doSomething () {
     return new Promise((resolve) =>{
