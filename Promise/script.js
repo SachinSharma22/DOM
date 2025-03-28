@@ -1,3 +1,27 @@
+let promise1 = new Promise((resolve, reject) => {
+    let success =  true;
+
+   setTimeout(() => {
+    if(success){
+        resolve("Promise1 Successfull:");
+    }else{
+        reject("Promise Rejected:")
+    }
+   }, 2000);
+})
+
+promise1.then((message) => {
+    console.log("Your message is: " + message);
+    return "Your new message is: ";
+})
+.then((newmsg) =>{
+    console.log("here is " + newmsg);
+})
+.catch((error) => {
+    console.log("Your error is : " + error);
+}).finally((message) =>{
+    console.log("I will run defenetilly ");
+})
 
 
 
