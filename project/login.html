@@ -8,15 +8,14 @@
      <!-- <link rel="stylesheet" href="aiStyle.css"> -->
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 
-    <!-- Google reCaptcha API link -->
-    <!-- <script src="https://www.google.com/recaptcha/api.js"></script> -->
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 
 </head>
 <body>
     
     <div class="container">
         <div class="form-box login">
-            <form action="">
+            <form action="" method="post">
                 <h1>Login</h1>
                 <div class="input-box">
                     <input type="text" placeholder="Username" required>
@@ -29,7 +28,9 @@
                 <div class="forgot-link">
                     <a href="#">Forgot password?</a>
                 </div>
-                <!-- <div class="g-recaptcha" data-sitekey="6LdfRAQrAAAAAIjUfULctN9o3S380fSmQdTOMpp2" id="recaptcha"></div> -->
+                <div class="reCaptcha-g">
+                    <div class="g-recaptcha" data-sitekey="6LeZSwQrAAAAANAaMv4Dk-Z3YdqWUDk82LDq81Ct"></div>
+                </div>
                 <button id="btnAi" type="submit" class="btn">Login</button>
                 <p>or login with social platform</p>
                 <div class="social-icons">

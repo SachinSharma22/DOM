@@ -38,15 +38,6 @@ function generateAndFillPassword() {
             const username = document.getElementById('username').value;
             const email = document.getElementById('email').value;
             const password = document.getElementById('password').value;
-            // const recaptchaResponse = grecaptcha.getResponse(); // Get reCAPTCHA response
-
-            // Check if the reCAPTCHA is completed
-            // if (!recaptchaResponse) {
-            //     alert("Please complete the CAPTCHA");
-            //     return;
-            // }
-
-            // You can perform further actions like sending the data to the server here
 
             // Show the alert message after form data is validated
             alert(`Registration Successful!\nUsername: ${username}\nEmail: ${email}\nPassword: ${password}`);
@@ -61,8 +52,5 @@ function showMessage() {
 }
 rgBtn.addEventListener('submit', showMessage);
 
-// // Google recaptcha code
 
-// function onSubmit(token) {
-//   document.getElementById("demo-form").submit();
-// }
+
