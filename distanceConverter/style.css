@@ -1,0 +1,134 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+body{
+    height: 100vh;
+    width: 100%;
+    background: rgb(34,193,195);
+    background: radial-gradient(circle, rgba(34,193,195,1) 0%, rgba(110,182,180,1) 55%, rgba(156,210,201,0.8239670868347339) 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container{
+    position: relative;
+    height: 400px;
+    width: 50%;
+    background: rgb(25,97,98);
+    background: radial-gradient(circle, rgba(25,97,98,1) 0%, rgba(37,75,74,1) 55%, rgba(4,107,89,1) 100%);
+    box-shadow: 5px 6px 16px -3px rgba(0,5,5,0.61);
+    -webkit-box-shadow: 5px 6px 16px -3px rgba(0,5,5,0.61);
+    -moz-box-shadow: 5px 6px 16px -3px rgba(0,5,5,0.61);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 15px;
+}
+
+.first-item-container{
+    position: absolute;
+    top: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgb(25,97,98);
+    background: radial-gradient(circle, rgba(25,97,98,1) 0%, rgba(37,75,74,1) 55%, rgba(4,107,89,1) 100%);
+    box-shadow: 5px 6px 16px -3px rgba(0,5,5,0.61);
+    -webkit-box-shadow: 5px 6px 16px -3px rgba(0,5,5,0.61);
+    -moz-box-shadow: 5px 6px 16px -3px rgba(0,5,5,0.61);
+    margin: 20px;
+    padding: 20px;
+    border-radius: 20px;
+}
+.second-item-container{
+    position: absolute;
+    top: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgb(25,97,98);
+    background: radial-gradient(circle, rgba(25,97,98,1) 0%, rgba(37,75,74,1) 55%, rgba(4,107,89,1) 100%);
+    box-shadow: 5px 6px 16px -3px rgba(0,5,5,0.61);
+    -webkit-box-shadow: 5px 6px 16px -3px rgba(0,5,5,0.61);
+    -moz-box-shadow: 5px 6px 16px -3px rgba(0,5,5,0.61);
+    margin: 20px;
+    padding: 20px;
+    border-radius: 20px;
+}
+.first-item-container input,
+.second-item-container input{
+    height: 100%;
+    width: 100%;
+    font-size: 0.9rem;
+    font-weight: bold;
+    border-radius: 5px;
+    padding: 3px;
+
+}
+
+#option1, #option2{
+    height: 100%;
+    width: 30%;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+#btnAi {
+    background: linear-gradient(135deg, rgb(58, 156, 158), #178092); /* Gradient background */
+    color: white; /* Text color */
+    font-size: 16px; /* Font size */
+    font-weight: bold; /* Font weight */
+    width: 80%;
+    padding: 15px 30px; /* Padding */
+    border: none; /* No border */
+    border-radius: 50px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    text-transform: uppercase; /* Uppercase text */
+    letter-spacing: 1px; /* Spacing between letters */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Shadow effect */
+    transition: all 0.3s ease; /* Smooth transition for all properties */
+    position: relative;
+    top: 15%; /* Positioning for pseudo-elements */
+    overflow: hidden; /* Hide overflow for pseudo-elements */
+}
+
+#btnAi::before {
+    content: ''; /* Pseudo-element for ripple effect */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 300%; /* Width of the ripple */
+    height: 300%; /* Height of the ripple */
+    background: rgba(255, 255, 255, 0.3); /* Ripple color */
+    border-radius: 50%; /* Circular ripple */
+    transform: translate(-50%, -50%) scale(0); /* Center and scale down */
+    transition: transform 0.6s ease; /* Smooth transition for ripple */
+    z-index: 0; /* Behind the button text */
+}
+
+#btnAi:hover::before {
+    transform: translate(-50%, -50%) scale(1); /* Scale up on hover */
+}
+
+#btnAi:hover {
+    background: linear-gradient(135deg, #0a83a1, #1d4858); /* Reverse gradient on hover */
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3); /* Darker shadow on hover */
+    transform: translateY(-2px); /* Lift effect on hover */
+}
+
+#btnAi:active {
+    transform: translateY(0); /* Reset lift effect on click */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); /* Shadow effect on click */
+}
+
+#btnAi span {
+    position: relative; /* Positioning for text */
+    z-index: 1; /* Above the ripple */
+}
+

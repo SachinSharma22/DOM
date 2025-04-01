@@ -54,3 +54,80 @@ rgBtn.addEventListener('submit', showMessage);
 
 
 
+document.getElementById('register-form').addEventListener('submit', function (event) {
+    event.preventDefault(); // Prevent default form submission
+
+    // Get the form values
+    const username = document.getElementById('username').value;
+    const email = document.getElementById('email').value;
+    const password = document.getElementById('password').value;
+
+    // Create a user object to store in local storage
+    const user = {
+        username: username,
+        email: email,
+        password: password // In a real-world app, you'd hash this before saving
+    };
+
+    // Get existing users from local storage
+    let users = JSON.parse(localStorage.getItem('users')) || [];
+
+    // Check if the email already exists in local storage
+    const emailExists = users.some(user => user.email === email);
+
+    if (emailExists) {
+        alert('Email already registered!');
+        return;
+    }
+
+    // Add the new user to the list
+    users.push(user);
+
+    // Store the updated users list back in local storage
+    localStorage.setItem('users', JSON.stringify(users));
+
+    // Show success message
+    alert('Registration successful!');
+
+    // Clear the form fields
+    document.getElementById('register-form').reset();
+});
+
+
+
+document.getElementById('login-form').addEventListener('submit', function (event) {
+    event.preventDefault(); // Prevent default form submission
+
+    // Get the form values
+    const username = document.getElementById('login-username').value;
+    const password = document.getElementById('login-password').value;
+
+    // Retrieve stored users from local storage
+    let users = JSON.parse(localStorage.getItem('users')) || [];
+
+    // Check if the user exists in local storage and the password matches
+    const user = users.find(user => user.username === username && user.password === password);
+
+    // Show modal if login is successful
+    if (user) {
+        // Show success modal
+        showModal();
+    } else {
+        alert('Invalid username or password!');
+    }
+});
+
+// Show the modal
+function showModal() {
+    const modal = document.getElementById('loginSuccessModal');
+    modal.style.display = 'flex'; // Display the modal
+}
+
+// Close the modal
+function closeModal() {
+    const modal = document.getElementById('loginSuccessModal');
+    modal.style.display = 'none'; // Hide the modal
+}
+
+
+

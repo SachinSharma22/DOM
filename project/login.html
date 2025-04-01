@@ -26,12 +26,12 @@
                     <i class='bx bxs-lock-alt'></i>
                 </div>
                 <div class="forgot-link">
-                    <a href="#">Forgot password?</a>
+                    <a href="#" id="fgpass">Forgot password?</a>
                 </div>
                 <div class="reCaptcha-g">
                     <div class="g-recaptcha" data-sitekey="6LeZSwQrAAAAANAaMv4Dk-Z3YdqWUDk82LDq81Ct"></div>
                 </div>
-                <button id="btnAi" type="submit" class="btn">Login</button>
+                <button id="login-form" type="submit" class="btn" id="btnAi">Login</button>
                 <p>or login with social platform</p>
                 <div class="social-icons">
                     <a href="#"><i class='bx bxl-google'></i></a>
@@ -40,6 +40,15 @@
                     <a href="#"><i class='bx bxl-github'></i></a>
                 </div>
             </form>
+
+            <!-- Login Success Modal (Initially Hidden) -->
+        <div id="loginSuccessModal" class="modal">
+            <div class="modal-content">
+                <span class="close-btn" onclick="closeModal()">&times;</span>
+                <h2>Login Successful!</h2>
+                <p>Welcome back!</p>
+            </div>
+        </div>
         </div>
         <div class="form-box register">
             <form action="" onsubmit="handleFormSubmit(event)">
@@ -56,8 +65,8 @@
                     <input type="password" placeholder="Password" id="password" required>
                     <i class='bx bxs-lock-alt'></i>
                 </div>
-                <button type="button" id="btnAi" class="gpb"  onclick="generateAndFillPassword()">RdPass</button>
-                <button type="submit" id="btnAi" class="btn">Register</button>
+                <button type="button"  class="gpb" id="btnAi"  onclick="generateAndFillPassword()">RdPass</button>
+                <button type="submit"  class="btn" id="btnAi">Register</button>
                 <p>or register with social platform</p>
                 <div class="social-icons">
                     <a href="#"><i class='bx bxl-google'></i></a>
